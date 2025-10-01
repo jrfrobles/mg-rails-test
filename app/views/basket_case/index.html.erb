@@ -5,5 +5,21 @@
 <%= link_to "Order by Amount - #{@order}", basket_case_order_by_amount_path(order: @order), class: "button"%>
 
 <div class="container">
-<!-- code here !-->
+  <table>
+    <thead>
+      <tr>
+        <th>Fruit</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+    <p></p>
+      <% @list_items.each do |fruit, amount| %>
+        <tr>
+          <td><%= fruit %></td>
+          <td><%= amount %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
